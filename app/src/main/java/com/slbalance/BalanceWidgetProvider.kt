@@ -17,6 +17,7 @@ import kotlinx.coroutines.withContext
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.OkHttpClient
 import okhttp3.RequestBody.Companion.toRequestBody
+import java.util.Locale
 
 
 class BalanceWidgetProvider : AppWidgetProvider() {
@@ -96,7 +97,7 @@ class BalanceWidgetProvider : AppWidgetProvider() {
             val response = client.newCall(request).execute()
             val responseJson = Gson().fromJson(response.body?.string(), Map::class.java)
             val data = responseJson["data"] as? Map<*, *>
-            val balance = data?.get("BALANCE") as? Double
+            val balance = String.format(Locale.US, "%.2f", data?.get("BALANCE") as? Double)
             return "$$balance"
         }
     }

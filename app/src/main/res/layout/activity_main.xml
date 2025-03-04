@@ -21,7 +21,7 @@
             android:id="@+id/text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enter IMSI Number and Silent Link Token"
+            android:text="Enter Order Link"
             android:textSize="24dp"
             android:layout_marginBottom="16dp"
             android:textAlignment="center"
@@ -40,15 +40,7 @@
             android:id="@+id/edittext1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter IMSI Number"
-            android:layout_marginBottom="16dp"
-            />
-
-        <EditText
-            android:id="@+id/edittext2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter Silent Link Token"
+            android:hint="Enter Order Link"
             android:layout_marginBottom="16dp"
             />
 
